@@ -1,1 +1,10 @@
-{{ garden_form.as_p }}
+{% extends "base.html" %}
+
+{% block head_title %}Log in{% endblock %}
+
+{% block content %}
+<form>
+    {{ garden_form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
