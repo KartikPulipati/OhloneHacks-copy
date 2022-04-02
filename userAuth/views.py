@@ -6,7 +6,7 @@ class LoginView(View):
 
     def get(self, request):
         self.garden_form = GardenForm()
-        return render(request, 'login.html', {'garden_form': self.garden_form})
+        return render(request, 'userAuth/login.html', {'garden_form': self.garden_form})
 
     def post(self, request):
         self.garden_form = GardenForm(request.POST)
@@ -17,4 +17,4 @@ class LoginView(View):
 
     def valid_form(self, request):
 
-        return render(request, 'login.html', {'garden_form': self.garden_form})
+        return render(request, 'userAuth/login.html', {'garden_form': self.garden_form})
