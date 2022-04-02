@@ -73,6 +73,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bettergarden.wsgi.application'
 
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "static"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
