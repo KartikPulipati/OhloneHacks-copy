@@ -10,6 +10,8 @@
 
 {% block content %}
     <main>
+        <a href="{% url 'createPlant' %}">Create Plant</a>
+        <br>
         {% for p in plants %}
             <li class="list-group-item">
                 {{ p.name }} <br>
