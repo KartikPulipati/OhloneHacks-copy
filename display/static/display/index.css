@@ -12,6 +12,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nbar {
+    border: 4px solid black;
+    opacity: 0.69;
     margin-top: 0;
     padding: 30px 15px;
     font-weight: bold;
