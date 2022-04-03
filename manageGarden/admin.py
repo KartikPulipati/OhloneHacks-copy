@@ -1,3 +1,4 @@
 from django.contrib import admin
+from manageGarden.models import plant
 
-# Register your models here.
+admin.site.register(plant)

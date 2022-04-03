@@ -7,7 +7,7 @@
 
         <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" crossorigin="anonymous"/>
         {% block css %}{% endblock %}
-        {% block js %}{% endblock %}
+
     </head>
     <body>
         <div class="nbar">
@@ -20,5 +20,11 @@
             </section>
         </div>
         {% block content %}{% endblock content %}
+        <!--FOOTER START-->
+    <div class="footer">
+        <center class="footer-text">Better Gardening© 2022</center>
+    </div>
+    <!--FOOTER END-->
+        {% block js %}{% endblock %}
     </body>
 </html>
