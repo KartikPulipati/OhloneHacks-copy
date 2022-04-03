@@ -12,10 +12,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nbar {
-    border: 4px solid black;
-    opacity: 0.69;
     margin-top: 0;
-    padding: 15px 15px;
+    padding: 30px 15px;
+    font-weight: bold;
 }
 
 .title {
@@ -175,7 +174,7 @@ main {
 .feature-three {
     position: absolute;
     left: 1105px;
-    top: 1110px;
+    top: 1130px;
 
 }
 
@@ -211,23 +210,39 @@ main {
 }
 
 .information {
-    padding-top: 50px;
-    height: 700px;
+    height: 840px;
     background-color: white;
+
 }
 
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-    margin-top: 600px;
+    position: absolute;
+    top: 425px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FDFEFF ' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    font-weight: bold;
+    font-size: 5rem;
+    opacity: 100%;
+    filter: brightness(10000%);
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-    margin-top: 600px;
+    position: absolute;
+    top: 425px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FDFEFF ' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    font-weight: bold;
+    font-size: 5rem;
+    opacity: 100%;
+    filter: brightness(10000%);
+}
+
+.info-image {
+    filter: brightness(40%);
+    height: 100%;
+    width: 100%;
 }
 
 .footer {
-    padding-top: 60px;
+    margin-top: 60px;
 }
 
 .footer-text {
@@ -238,4 +253,11 @@ main {
     bottom: 20px;
 }
 
-
+#image_drop_area {
+    width: 300px;
+    height: 170px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
