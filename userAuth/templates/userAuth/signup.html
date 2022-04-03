@@ -1,12 +1,11 @@
 {% extends "display/base.html" %}
 
-{% block head_title %}Log in{% endblock %}
+{% block head_title %}Sign up{% endblock %}
 
 {% block content %}
 <form method="post">
     {% csrf_token %}
-    {{ login_form.as_p }}
+    {{ signup_form.as_p }}
     <button type="submit">Submit</button>
-    <a href="{% url 'signup' %}">Sign up</a>
 </form>
 {% endblock %}
