@@ -7,12 +7,16 @@
 {% block head_title %}Log in{% endblock %}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ login_form.as_p }}
-    <button type="submit">Submit</button>
-    <a href="{% url 'signup' %}">Sign up</a>
-</form>
+<main>
+    <section class="main-section">
+        <form method="post">
+            {% csrf_token %}
+            {{ login_form.as_p }}
+            <button type="submit">Submit</button>
+            <a href="{% url 'signup' %}">Sign up</a>
+        </form>
+    </section>
+</main>
 {% endblock %}
 
 {% block js %}{% endblock js %}
