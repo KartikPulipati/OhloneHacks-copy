@@ -1,8 +1,10 @@
 from django.shortcuts import render
 import base64
 import requests
+from django.contrib.auth.decorators import login_required
 
 
+@login_required(login_url='login')
 def identify(request):
     if request.method == 'POST':
         image = request.POST['gardenImage']
@@ -25,9 +27,9 @@ def identify(request):
             }).json()
         details = {}
         for suggestion in response["suggestions"]:
-            details['name'] = suggestion["plant_name"]
-            details['common_name'] = suggestion["plant_details"]["common_names"]
-            details['url'] = suggestion["plant_details"]["url"]
+            details['Name'] = suggestion["plant_name"]
+            details['Common Name'] = suggestion["plant_details"]["common_names"]
+            details['Info'] = suggestion["plant_details"]["url"]
         return render(request, 'identifyPlant/identify.html', {'details': details})
     else:
         return render(request, 'identifyPlant/identify.html')
