@@ -6,4 +6,4 @@ User = get_user_model()
 class GardenForm(ModelForm):
     class Meta:
         model = User
-        fields = ["email", "password"]
+        fields = ["username", "password"]
