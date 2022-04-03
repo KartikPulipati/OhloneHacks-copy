@@ -10,8 +10,8 @@
 
 
 {% block content %}
-    <h1></h1>
     <main>
+        <h1>Create A Plant!</h1>
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">
@@ -23,6 +23,7 @@
              <div class="form-group">
                 <input class="form-control" name="output" placeholder="How much of this do you expect to grow monthly?" type="number">
              </div>
+            <button type="submit">Submit form</button>
         </form>
     </main>
 {% endblock %}
