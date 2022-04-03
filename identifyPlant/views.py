@@ -3,4 +3,4 @@ import base64
 import requests
 
 def identify(request):
-    pass
+    if
