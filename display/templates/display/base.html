@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block head_title %}BetterGarden{% endblock %}</title>
 
+        <link rel="stylesheet" href="{%static 'display/index.css' %}">
         <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" crossorigin="anonymous"/>
         {% block css %}{% endblock %}
 
@@ -16,6 +17,10 @@
                 <nav class="nav-items">
                     <a href="#">Identify</a>
                     <a href="#">Your Garden</a>
+                    <form method="post">
+                        {% csrf_token %}
+                        <button type="submit">Log out</button>
+                    </form>
                 </nav>
             </section>
         </div>
