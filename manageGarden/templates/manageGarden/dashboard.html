@@ -1,0 +1,23 @@
+{% extends "display/base.html" %}
+{% load static %}
+
+{% block head_title %}Dashboard{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{%static 'manageGarden/manage.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+    <main>
+        {% for p in plants %}
+            <li class="list-group-item">
+                {{ p.name }} <br>
+                {{ p.water_consumption }}<br>
+                {{ p.output }}
+            </li>
+        {% endfor %}
+    </main>
+{% endblock %}
+
+{% block js %}{% endblock js %}

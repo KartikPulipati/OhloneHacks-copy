@@ -1,0 +1,30 @@
+{% extends "display/base.html" %}
+{% load static %}
+
+{% block head_title %}Create{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{%static 'manageGarden/manage.css' %}">
+{% endblock css %}
+
+
+
+{% block content %}
+    <h1></h1>
+    <main>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input aria-describedby="username" class="form-control" name="name" placeholder="Enter Username" type="text">
+            </div>
+             <div class="form-group">
+                <input class="form-control" name="water" placeholder="How much water will this plant Consume?" type="number">
+            </div>
+             <div class="form-group">
+                <input class="form-control" name="output" placeholder="How much of this do you expect to grow monthly?" type="number">
+             </div>
+        </form>
+    </main>
+{% endblock %}
+
+{% block js %}{% endblock js %}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'display',
     'identifyPlant',
     'userAuth',
+    'manageGarden',
 ]
 
 MIDDLEWARE = [

@@ -1,4 +1,8 @@
 {% extends "display/base.html" %}
+{% load static %}
+{% block css %}{% endblock css %}
+
+
 
 {% block head_title %}Log in{% endblock %}
 
@@ -10,3 +14,5 @@
     <a href="{% url 'signup' %}">Sign up</a>
 </form>
 {% endblock %}
+
+{% block js %}{% endblock js %}
