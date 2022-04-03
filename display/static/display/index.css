@@ -82,6 +82,7 @@ nav a {
   font-size: 1.25rem;
   display: inline-block;
   margin-left: 30px;
+
 }
 
 nav a:hover {
@@ -106,7 +107,7 @@ main {
     background-color: white;
     padding: 90px 150px;
 }
-.first-image {
+.main-section {
     display: flex;
     justify-content: space-between;
 }
@@ -139,6 +140,73 @@ main {
     font-size: 3.75rem;
     position: relative;
     top: 150px;
-    left: 20px;
-
+    left: 90px;
 }
+
+.left-frame {
+    position: relative;
+    right: 550px;
+    bottom: 20px;
+}
+
+.right-frame {
+    position: relative;
+    right: 100px;
+    top: 500px;
+}
+
+.features-section {
+    height: 600px;
+    display: inline-block;
+}
+
+.feature-one {
+    position: relative;
+    left: 90px;
+    top: 70px;
+}
+
+.feature-two {
+    position: relative;
+    left: 600px;
+    top: -15px;
+}
+
+.feature-three {
+    position: relative;
+    left: 1110px;
+    top: -100px;
+}
+
+.magnifying {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 150px;
+    margin-top: 80px;
+}
+
+.bar-chart {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 450px;
+    margin-top: 80px;
+}
+
+.health {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 700px;
+    margin-top: 80px;
+}
+
+.feature-title {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 40px;
+}
+
+
