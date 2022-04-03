@@ -168,14 +168,14 @@ a {
 
 .feature-one {
     position: relative;
-    left: 90px;
-    top: 70px;
+    right: 470px;
+    top: -220px;
 }
 
 .feature-two {
     position: relative;
-    left: 600px;
-    top: -15px;
+    right: -20px;
+    top: -305px;
 }
 
 .feature-three {
@@ -189,7 +189,7 @@ a {
     height: 200px;
     width: 200px;
     position: relative;
-    left: 150px;
+    right: 380px;
     margin-top: 80px;
 }
 
@@ -197,7 +197,7 @@ a {
     height: 200px;
     width: 200px;
     position: relative;
-    left: 450px;
+    left: -80px;
     margin-top: 80px;
 }
 
@@ -205,7 +205,8 @@ a {
     height: 200px;
     width: 200px;
     position: relative;
-    left: 700px;
+    left: 475px;
+    top: -250px;
     margin-top: 80px;
 }
 
