@@ -9,6 +9,9 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </section>
     <br>
+    {% for key, value in details.items %}
+        <li>{{key}} - {{value}}</li>
+    {% endfor %}
 </main>
 <style>
     .main-section {
