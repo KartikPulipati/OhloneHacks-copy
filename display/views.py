@@ -3,7 +3,6 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 
-@login_required(login_url="/accounts/login")
 def home(requests):
     if requests.method == "GET":
         return render(requests, 'display/home.html')
