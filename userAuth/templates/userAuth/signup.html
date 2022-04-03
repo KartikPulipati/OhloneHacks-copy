@@ -2,7 +2,21 @@
 {% load static %}
 
 {% block css %}
-
+<style>
+    .helptext {
+        display: none;
+    }
+    .main-section {
+        justify-content: center;
+    }
+    main form {
+        text-align: left;
+        border: 1px solid black;
+        border-radius: 4px;
+        background: rbga(0,0,0,0.04);
+        padding: 40px;
+    }
+</style>
 {% endblock css %}
 
 
@@ -10,11 +24,15 @@
 {% block head_title %}Sign up{% endblock %}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ signup_form.as_p }}
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<main>
+    <section class="main-section">
+        <form method="post">
+            {% csrf_token %}
+            {{ signup_form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</main>
 {% endblock %}
 {% block js %}
 {% endblock js %}
