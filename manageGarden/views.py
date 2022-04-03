@@ -3,19 +3,25 @@ from manageGarden.models import plant
 from django.contrib.auth.decorators import login_required
 
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def dashboard(request):
     plants = plant.objects.filter(users=request.user)
-    return render(request, 'manageGarden/dashboard.html', {'plants': plants})
+    total_water = 0
+    o = {}
+    for p in plants:
+        total_water += p.water_consumption
+        o[p.name] = p.output
 
-# @login_required(login_url='login')
+    return render(request, 'manageGarden/dashboard.html', {'plants': plants, 'w': total_water, 'o': o})
+
+@login_required(login_url='login')
 def createPlant(request):
     if request.method == 'GET':
         return render(request, 'manageGarden/create.html')
     else:
-        newtodo = plant.objects.create(users=request.user, name=request.POST['name'],
+        newplant = plant.objects.create(users=request.user, name=request.POST['name'],
                                        water_consumption=request.POST['water'], output=request.POST['output'])
-        newtodo.user = request.user
-        newtodo.save()
+        newplant.user = request.user
+        newplant.save()
         return redirect('dashboard')
 
