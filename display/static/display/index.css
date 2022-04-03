@@ -121,6 +121,11 @@ main {
     font-family: "Montserrat";
 }
 
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
 .save-text {
     font-size: 4rem;
     position: relative;
