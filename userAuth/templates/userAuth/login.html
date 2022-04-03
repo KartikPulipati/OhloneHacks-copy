@@ -1,6 +1,21 @@
 {% extends "display/base.html" %}
 {% load static %}
-{% block css %}{% endblock css %}
+{% block css %}
+<style>
+    .helptext {
+        display: none;
+    }
+    .main-section {
+        justify-content: center;
+    }
+    main form {
+        border: 1px solid black;
+        border-radius: 4px;
+        background: rbga(0,0,0,0.04);
+        padding: 40px;
+    }
+</style>
+{% endblock css %}
 
 
 
@@ -12,7 +27,7 @@
         <form method="post">
             {% csrf_token %}
             {{ login_form.as_p }}
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <a href="{% url 'signup' %}">Sign up</a>
         </form>
     </section>
