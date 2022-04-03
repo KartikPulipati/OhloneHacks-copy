@@ -1,18 +1,23 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.contrib.auth import logout
 from manageGarden.models import plant
 from django.contrib.auth.decorators import login_required
 
 
 @login_required(login_url='login')
 def dashboard(request):
-    plants = plant.objects.filter(users=request.user)
-    total_water = 0
-    o = {}
-    for p in plants:
-        total_water += p.water_consumption
-        o[p.name] = p.output
+    if request.method == "GET":
+        plants = plant.objects.filter(users=request.user)
+        total_water = 0
+        o = {}
+        for p in plants:
+            total_water += p.water_consumption
+            o[p.name] = p.output
 
-    return render(request, 'manageGarden/dashboard.html', {'plants': plants, 'w': total_water, 'o': o})
+        return render(request, 'manageGarden/dashboard.html', {'plants': plants, 'w': total_water, 'o': o})
+    else:
+        logout(request)
+        return redirect(reverse("login"))
 
 @login_required(login_url='login')
 def createPlant(request):
