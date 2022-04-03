@@ -3,7 +3,8 @@
 {% block head_title %}Log in{% endblock %}
 
 {% block content %}
-<form>
+<form method="post">
+    {% csrf_token %}
     {{ garden_form.as_p }}
     <button type="submit">Submit</button>
 </form>
