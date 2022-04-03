@@ -85,7 +85,12 @@ nav a {
   margin-left: 30px;
 
 }
-
+nav button {
+    font-size: 1.25rem;
+    display: inline-block;
+    margin-left: 30px;
+    border: none;
+}
 nav a:hover {
   color: white;
 }
