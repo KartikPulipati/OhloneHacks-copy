@@ -14,13 +14,13 @@
         <br>
         {% for p in plants %}
             <li class="list-group-item">
-                {{ p.name }} <br>
-                {{ p.water_consumption }}<br>
-                {{ p.output }}
+                Plant name: { p.name }} <br>
+                Water consumption: {{ p.water_consumption }}<br>
+                How much you want to plant: {{ p.output }}
             </li>
         {% endfor %}
         <div style="" class="alert alert-light" role="alert">
-            Total Water Consumption {{w}}
+            Total Water Consumption: {{w}}
         </div>
     </main>
 {% endblock %}
