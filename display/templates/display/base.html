@@ -18,7 +18,7 @@
                 <a class="title" href="#">Better Gardens</a>
                 <nav class="nav-items">
                     <a href="#">Identify</a>
-                    <a href="#">Your Garden</a>
+                    <a href="{% url 'dashboard' %}">Your Garden</a>
                     <form method="post">
                         {% csrf_token %}
                         <button type="submit">{% if user.is_authenticated %}{{ user.username }}{% else %}Log in{% endif %}</button>
