@@ -4,5 +4,4 @@ from identifyPlant import views
 
 urlpatterns = [
     path('', views.identify, name='identify'),
-
 ]

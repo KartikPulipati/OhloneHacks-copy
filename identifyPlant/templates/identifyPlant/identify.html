@@ -1,0 +1,19 @@
+{% extends 'display/base.html' %}
+
+{% block content %}
+<main>
+    <h1>Submit your plant</h1>
+    <section class="main-section">
+        <label class="form-label" for="customFile">Send us a picture of your plant, and we'll tell you all about it!</label>
+        <input type="file" class="form-control" id="customFile" name="gardenImage" />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </section>
+    <br>
+</main>
+<style>
+    .main-section {
+        justify-content: center;
+        flex-flow: wrap;
+    }
+</style>
+{% endblock %}
